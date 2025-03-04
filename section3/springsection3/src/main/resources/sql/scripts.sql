@@ -7,3 +7,14 @@ insert ignore into `authorities` values('arich', 'read');
 
 insert ignore into `users` values('admin', '{noop}12345', 1);
 insert ignore into `authorities` values('admin', 'admin');
+
+create table `customers` (
+	`id` int NOT NULL auto_increment,
+    `email` varchar(45) not null,
+    `pwd` varchar(200) not null,
+    `role` varchar(45) not null,
+    primary key(`id`)
+);
+
+insert into `customers` ('email', 'pwd', 'role') values('uchario@yahoo.com', '{noop}Csp_1234', 'read');
+insert into `customers` (`email`, `pwd`, `role`) values('uariolu@gmail.com', '{noop}Csp_1234', 'admin');
